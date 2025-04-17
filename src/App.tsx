@@ -32,15 +32,7 @@ const App = () => (
             <Sonner />
             <Routes>
               <Route path="/login" element={<Login />} />
-              
-              <Route
-                path="/"
-                element={
-                  <ProtectedRoute>
-                    <AppLayout />
-                  </ProtectedRoute>
-                }
-              >
+              <Route path="/" element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
                 <Route index element={<Dashboard />} />
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="reports" element={<Reports />} />
@@ -48,9 +40,8 @@ const App = () => (
                 <Route path="disease-detection" element={<DiseaseDetection />} />
                 <Route path="llm-disease-detection" element={<LLMDiseaseDetection />} />
                 <Route path="settings" element={<Settings />} />
-                <Route path="docs" element={<Documentation />} />
+                <Route path="documentation" element={<Documentation />} />
               </Route>
-              
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>
