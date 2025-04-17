@@ -27,7 +27,7 @@ const Login = () => {
       <LoginForm />
       
       <p className="mt-8 text-center text-sm text-muted-foreground">
-        Enter any email and a password (min 6 characters) to login
+        Enter your credentials to access the dashboard
       </p>
     </div>
   );
